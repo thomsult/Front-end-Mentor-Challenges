@@ -1,0 +1,39 @@
+extends layout
+
+block content
+  .contentbg
+    .contentbg_top
+      h1 IP Address Tracker
+      .input_Group 
+        input.inputText#inputIP(type="text",value="",placeholder="Search for any IP address or domain")
+        a.bt(href='#' onclick="SendIP()")
+          i.fa.fa-chevron-right(aria-hidden='true')
+          
+    .contentbg_md
+      .modal
+        ul 
+          li 
+            h3 IP ADDRESS
+            p#IPADDRESS test
+          li 
+            h3 LOCATION
+            p#LOCATION test
+          li 
+            h3 TIMEZONE
+            p#TIMEZONE test
+          li 
+            h3 ISP
+            p#ISP test
+    .contentbg_button
+      #map
+      
+
+  
+    
+  .attribution
+    | Challenge by 
+    a(href="https://www.frontendmentor.io?ref=challenge", target="_blank", rel="noopener noreferrer") Frontend Mentor. 
+    | Coded by 
+    a(href="#") Thomsult
+ 
+  script(src="././javascripts/map.js")
