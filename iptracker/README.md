@@ -2,7 +2,7 @@
 Clone the repository
 `git clone  https://github.com/thomsult/Front-end-Mentor-Challenges.git <Front-end-Mentor>`
 Install dependencies
-`cd <Front-end-Mentor/iptracker>
+`cd <Front-end-Mentor/iptracker>`
 `npm init & install express`
 
 #### Build and run the project
