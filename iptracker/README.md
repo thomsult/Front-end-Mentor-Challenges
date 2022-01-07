@@ -29,8 +29,7 @@ Users should be able to:
 - Search for any IP addresses or domains and see the key information and location
 
 ### Screenshot
-
-![](./screenshot.jpg)
+![image](https://user-images.githubusercontent.com/16962047/148533900-29893d2c-57f0-4f9c-a77f-15d924b0d21a.png)
 
 Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
 
