@@ -52,7 +52,7 @@ function SetMap(...ip)
       }
       else{
         console.log(data)
-        alert("IP is not Correct")
+        alert("IP is not Correct, please enter IPV4 valid Address")
       }
       
    }).catch((er)=>{console.log(er)})
@@ -72,7 +72,7 @@ SetMap()
       SetMap(IP)
      }
      else{
-      alert("IP is not Correct")
+      alert("IP is not Correct, please enter IPV4 valid Address")
      }
     
    }
