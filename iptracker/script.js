@@ -22,10 +22,11 @@ function SetText(obj){
 
 function SetMap(...ip)
 {
-  //console.log("http://ip-api.com/json/"+ip)
-  fetch("http://ip-api.com/json/"+ip)
+  //console.log("http://ip-api.com/json/"+ip)https://ipapi.co/90.89.69.156/json/
+  fetch("https://ipapi.co/"+ip+"/json/")
     .then((resp) => resp.json())
     .then(function (data) {
+      console.log(data)
       if(data.status != "fail"){
         console.log(data)
         var lat = data.lat.toFixed(3);
