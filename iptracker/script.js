@@ -29,15 +29,15 @@ function SetMap(...ip)
       console.log(data)
       if(data.status != "fail"){
         console.log(data)
-        var lat = data.lat.toFixed(3);
-        var lon = data.lon.toFixed(3);
+        var lat = data.latitude.toFixed(3);
+        var lon = data.longitude.toFixed(3);
         var maplocations = { 
           lat: parseFloat(lat), 
           lng: parseFloat(lon),
           IPADDRESS:data.query, 
           LOCATION:data.city+", "+data.country,
           TIMEZONE:data.timezone,
-          ISP:data.isp
+          ISP:data.org
         
         
         
