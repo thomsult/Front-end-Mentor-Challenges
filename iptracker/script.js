@@ -34,7 +34,7 @@ function SetMap(...ip)
         var maplocations = { 
           lat: parseFloat(lat), 
           lng: parseFloat(lon),
-          IPADDRESS:data.query, 
+          IPADDRESS:data.ip, 
           LOCATION:data.city+", "+data.country,
           TIMEZONE:data.timezone,
           ISP:data.org
