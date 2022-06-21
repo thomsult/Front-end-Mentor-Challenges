@@ -1,0 +1,221 @@
+
+.LogoNavbar{
+  
+padding-top: 2em;
+padding-left: 1.5em;
+
+
+}
+.NavBar {
+
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 1em 2em;
+  background: rgba(0, 0, 0, 0.301);
+
+}
+
+.MenuCheckbox {
+  display: none;
+}
+
+.NavBar > div > ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  
+  align-items: center;
+  justify-content: space-between;
+  width: 50vmax;
+  height: 50px;
+}
+
+.NavBarItems > a {
+  font-size: 1.4em;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.788);
+  font-family: 'Barlow Condensed', sans-serif;
+  text-transform: uppercase;
+  list-style: none;
+
+  font-weight: 400;
+}
+
+.NavBarItems > a>span{
+  font-weight: 900;
+  font-family: 'Barlow Condensed', sans-serif;
+  margin-right: 0.7em;
+  color: rgb(255, 255, 255);
+ }
+ @media screen and (min-width: 980px) and (max-width:1400px) {
+  .NavBarItems > a>span{
+    display: none;
+  }
+}
+
+ .NavBarItems>.active > span , .NavBarItems>.active {
+  color: rgb(255, 255, 255);
+}
+
+
+.NavBarItems:hover > a> span,.NavBarItems:hover > a {
+  color: rgba(255, 255, 255, 0.555);
+}
+
+
+.NavUnderLinks {
+  
+  position: absolute;
+  background: rgb(238, 238, 238);
+  height: 3px;
+  width: var(--UnderLinksWidth);
+  left: var(--UnderLinksLeft);
+  bottom: 0;
+  transition: left ease-in-out 0.3s, width ease-in-out 0.3s;
+  -webkit-transition: left ease-in-out 0.3s, width ease-in-out 0.3s;
+  -moz-transition: left ease-in-out 0.3s, width ease-in-out 0.3s;
+  -ms-transition: left ease-in-out 0.3s, width ease-in-out 0.3s;
+  -o-transition: left ease-in-out 0.3s, width ease-in-out 0.3s;
+}
+
+.NavbarWarp{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+
+  
+  }
+@media screen and (max-width: 980px) {
+  
+  .NavBar {
+    overflow: hidden;
+    width: 70vw;
+    left:30%;
+    position: absolute;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0;
+    background:transparent
+  }
+
+
+
+
+
+  .NavBar > div > ul {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 7em;
+    padding-left: 3em;
+width: 100vw;
+    z-index: 5;
+    background: #97979734; 
+    backdrop-filter: blur(15px);
+    overflow: hidden;
+    animation: menuAnimR 300ms linear forwards;
+    -webkit-animation: menuAnimR 300ms linear forwards;
+}
+
+
+  .NavUnderLinks {
+    opacity: 0;
+    position: absolute;
+    width: 5px;
+    z-index: 5;
+    left: calc(100% - 15px);
+    transition: top ease-in-out 0.3s, height ease-in-out 0.3s;
+    transform: translateX(-5px);
+    -webkit-transform: translateX(-5px);
+    -moz-transform: translateX(-5px);
+    -ms-transform: translateX(-5px);
+    -o-transform: translateX(-5px);
+
+}
+
+  .NavBarItems  {
+    margin-top: 3em;
+    
+
+  }
+
+
+
+
+  .Menu {
+    position: absolute;
+    z-index: 6;
+    top: 40px;
+    right: 30px;
+
+    height: 25px;
+    width: 25px;
+
+    cursor: pointer;
+
+  }
+  .Menu:before,
+  .Menu:after,
+  .Menu div {
+    background: rgb(255, 255, 255);
+    content: "";
+    display: block;
+    height: 4px;
+    border-radius: 3px;
+    margin: 4px 0;
+    transition: 0.5s;
+  }
+
+  .MenuCheckbox:checked ~ label > div {
+    transform: scale(0);
+  }
+
+  .MenuCheckbox:checked ~ label::before {
+    transform: translateY(7px) rotate(135deg);
+    -webkit-transform: translateY(7px) rotate(135deg);
+    -moz-transform: translateY(7px) rotate(135deg);
+    -ms-transform: translateY(7px) rotate(135deg);
+    -o-transform: translateY(7px) rotate(135deg);
+}
+  .MenuCheckbox:checked ~ label::after {
+    transform: translateY(-7px) rotate(-135deg);
+    -webkit-transform: translateY(-7px) rotate(-135deg);
+    -moz-transform: translateY(-7px) rotate(-135deg);
+    -ms-transform: translateY(-7px) rotate(-135deg);
+    -o-transform: translateY(-7px) rotate(-135deg);
+}
+  .MenuCheckbox:checked ~ ul {
+    animation: menuAnim 300ms linear forwards;
+    -webkit-animation: menuAnim 300ms linear forwards;
+
+  }
+  .MenuCheckbox:checked ~ .NavUnderLinks {
+    opacity: 1;
+  }
+  @keyframes menuAnim {
+    0% {
+      height: 10px;
+      opacity: 0;
+    }
+    100% {
+      height: 100vh;
+      opacity: 1;
+    }
+  }
+
+  @keyframes menuAnimR {
+    0% {
+      height: 100vh;
+      opacity: 1;
+    }
+    100% {
+      height: 10px;
+      opacity: 0;
+    }
+  }
+}
