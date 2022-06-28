@@ -1,0 +1,151 @@
+.PlanetList{
+    width: 80%;
+    padding-bottom: 1em;
+    max-width: 250px;
+    
+}
+
+
+.PlanetList>ul,.CrewsList>ul,.TechnologyList>ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    
+    
+}
+.PlanetList>ul>li{
+    text-transform: uppercase;
+    font-family: 'Barlow Condensed', sans-serif;
+
+    letter-spacing: 2.36px;
+    padding-bottom: 0.8em;
+    padding-top: 1.5em;
+    cursor: pointer;
+    text-decoration: none;
+    color: #D0D6F9;
+    transition: opacity .3s ease-in-out;
+    -webkit-transition: opacity .3s ease-in-out;
+    -moz-transition: opacity .3s ease-in-out;
+    -ms-transition: opacity .3s ease-in-out;
+    -o-transition: opacity .3s ease-in-out;
+}
+.PlanetList>ul>li:hover{
+    opacity: 0.6;
+}
+.PlanetList>ul>li.active{
+    border-bottom: solid 3px white;
+
+}
+
+
+
+@media screen and (min-width:700px) {
+    .PlanetList{
+        width: 60%;
+        
+    }
+
+    
+}
+
+
+
+
+
+
+
+.CrewsList{
+    
+    padding: 1em;
+    max-width: 150px;
+}
+
+
+
+.CrewsList>ul>li{
+    display: block;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background: #5c5c5c;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    margin: 0.5em;
+    cursor: pointer;
+    transition: background .3s ease-in-out;
+    -webkit-transition: background .3s ease-in-out;
+    -moz-transition: background .3s ease-in-out;
+    -ms-transition: background .3s ease-in-out;
+    -o-transition: background .3s ease-in-out;
+}
+.CrewsList>ul>li:hover{
+    background: #b3b3b3;
+}
+.CrewsList>ul>li.active{
+    background: #ffffff;
+}
+
+
+.TechnologyList{
+
+    padding: 1em;
+}
+.TechnologyList>ul>li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: clamp(3rem, 5vw + 1rem, 5rem);
+    height: clamp(3rem, 5vw + 1rem, 5rem);
+   
+max-width: 60px;
+max-height: 60px;
+
+
+
+
+    border-radius: 50%;
+    
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    margin: 0.5em;
+    cursor: pointer;
+    border: solid 1px #5c5c5c;
+    transition: border .3s ease-in-out;
+    -webkit-transition: border .3s ease-in-out;
+    -moz-transition: border .3s ease-in-out;
+    -ms-transition: border .3s ease-in-out;
+    -o-transition: border .3s ease-in-out;
+
+
+
+
+
+
+}
+.TechnologyList>ul>li:hover{
+    border: solid 1px #b3b3b3;
+}
+.TechnologyList>ul>li.active{
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+}
+@media screen and (min-width: 1200px) {
+
+    .TechnologyList>ul{
+        flex-direction: column;
+
+
+
+    }
+
+
+
+}

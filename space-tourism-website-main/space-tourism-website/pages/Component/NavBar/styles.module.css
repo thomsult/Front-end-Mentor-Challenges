@@ -1,19 +1,19 @@
 
 .LogoNavbar{
   
-padding-top: 2em;
+padding-top: 1.55em;
 padding-left: 1.5em;
 
 
 }
 .NavBar {
 
-
   display: flex;
   align-items: center;
   justify-content: flex-end;
   padding: 1em 2em;
-  background: rgba(0, 0, 0, 0.301);
+  background: #97979731;
+  backdrop-filter: blur(10px);
 
 }
 
@@ -25,7 +25,8 @@ padding-left: 1.5em;
   list-style: none;
   display: flex;
   flex-direction: row;
-  
+    
+
   align-items: center;
   justify-content: space-between;
   width: 50vmax;
@@ -33,7 +34,7 @@ padding-left: 1.5em;
 }
 
 .NavBarItems > a {
-  font-size: 1.4em;
+  font-size: 1em;
   text-decoration: none;
   color: rgba(255, 255, 255, 0.788);
   font-family: 'Barlow Condensed', sans-serif;
@@ -49,14 +50,17 @@ padding-left: 1.5em;
   margin-right: 0.7em;
   color: rgb(255, 255, 255);
  }
- @media screen and (min-width: 980px) and (max-width:1400px) {
+ @media screen and (min-width: 700px) and (max-width:1200px) {
   .NavBarItems > a>span{
     display: none;
   }
 }
 
- .NavBarItems>.active > span , .NavBarItems>.active {
-  color: rgb(255, 255, 255);
+.active{
+  color: rgba(255, 0, 0, 0.548);
+  padding-bottom: calc(2em - 3px);
+  border-bottom: solid 3px rgba(255, 255, 255, 0.548);
+
 }
 
 
@@ -65,40 +69,31 @@ padding-left: 1.5em;
 }
 
 
-.NavUnderLinks {
-  
-  position: absolute;
-  background: rgb(238, 238, 238);
-  height: 3px;
-  width: var(--UnderLinksWidth);
-  left: var(--UnderLinksLeft);
-  bottom: 0;
-  transition: left ease-in-out 0.3s, width ease-in-out 0.3s;
-  -webkit-transition: left ease-in-out 0.3s, width ease-in-out 0.3s;
-  -moz-transition: left ease-in-out 0.3s, width ease-in-out 0.3s;
-  -ms-transition: left ease-in-out 0.3s, width ease-in-out 0.3s;
-  -o-transition: left ease-in-out 0.3s, width ease-in-out 0.3s;
-}
 
 .NavbarWarp{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  position: relative;
 
 
-  
   }
-@media screen and (max-width: 980px) {
+
+  .NavBarItemsInfo{display: none;}
+
+
+
+@media screen and (max-width: 700px) {
   
   .NavBar {
+
     overflow: hidden;
-    width: 70vw;
-    left:30%;
-    position: absolute;
+
     align-items: flex-start;
     justify-content: flex-start;
     padding: 0;
-    background:transparent
+    background:transparent;
+    backdrop-filter: none;
   }
 
 
@@ -106,47 +101,45 @@ padding-left: 1.5em;
 
 
   .NavBar > div > ul {
-    position: relative;
+position: fixed;
+right: 0;
+
+width: 65vw;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+   justify-content: flex-start;
     align-items: flex-start;
     padding-top: 7em;
-    padding-left: 3em;
-width: 100vw;
+    padding-left: 2.5em;
     z-index: 5;
     background: #97979734; 
     backdrop-filter: blur(15px);
     overflow: hidden;
     animation: menuAnimR 300ms linear forwards;
     -webkit-animation: menuAnimR 300ms linear forwards;
+    
 }
 
 
-  .NavUnderLinks {
-    opacity: 0;
-    position: absolute;
-    width: 5px;
-    z-index: 5;
-    left: calc(100% - 15px);
-    transition: top ease-in-out 0.3s, height ease-in-out 0.3s;
-    transform: translateX(-5px);
-    -webkit-transform: translateX(-5px);
-    -moz-transform: translateX(-5px);
-    -ms-transform: translateX(-5px);
-    -o-transform: translateX(-5px);
 
-}
 
   .NavBarItems  {
+    width: 100%;
     margin-top: 3em;
+  
     
+  }
+  .NavBarItems>.active  {
+    padding-bottom: 0;
+    border-bottom: none;
+    display: block;
+    border-right: solid 3px rgba(255, 255, 255, 0.548);
 
+  
+  
   }
 
-
-
-
+  
   .Menu {
     position: absolute;
     z-index: 6;
@@ -218,4 +211,39 @@ width: 100vw;
       opacity: 0;
     }
   }
+}
+@media screen and (min-width: 1200px) {
+  
+  .NavBar::after{
+position: absolute;
+content: " ";
+
+height: 1px;
+width: 37vw;
+background: #9797979d;
+right: 57vw;
+  }
+
+}
+.NavBar::before{
+  content: " ";
+  width: 5vw;
+}
+
+
+
+@-moz-document url-prefix() {
+  .NavBarItemsInfo{
+    position: absolute;
+    display: flex;
+    color: rgb(255, 255, 255);
+    bottom: 0;
+  }
+  @media screen and (min-width: 700px){
+    
+    .NavBarItemsInfo{
+      display: none;
+    }
+  }
+
 }
