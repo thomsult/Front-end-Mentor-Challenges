@@ -38,7 +38,7 @@ body {
   /*Layout*/
 .wrapper{
     min-height: 100vh;
-    background-image: url(../images/pattern-curve.svg);
+    background-image: url(./images/pattern-curve.svg);
     background-repeat: no-repeat;
     background-size: 40%;
     background-position: left bottom;
